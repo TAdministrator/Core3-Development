@@ -678,10 +678,8 @@ ResourceSpawn* ResourceSpawner::getRecycledVersion(ResourceSpawn* resource) {
 			recycledEntry = resourceTree->getEntry("chemical_compound"); 
 		else if (resource->isType("fiberplast")) 
 			recycledEntry = resourceTree->getEntry("fiberplast_compound"); 
-		else if (resource->isType("petrochem_inert_lubricating_oil")) 
-			recycledEntry = resourceTree->getEntry("lubricating_oil_compound"); 
-		else if (resource->isType("petrochem_inert_polymer")) 
-			recycledEntry = resourceTree->getEntry("polymer_compound"); 
+		else 
+			recycledEntry = resourceTree->getEntry("petrochem_compound");  
 		break;
 	case RecycleTool::WATER:
 		recycledEntry = resourceTree->getEntry("water_solution");
